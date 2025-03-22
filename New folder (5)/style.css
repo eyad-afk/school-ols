@@ -1,0 +1,410 @@
+/* تنسيقات عامة */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+
+/* الشعار والعنوان */
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    /* حجم الشعار */
+    height: 60px;
+    /* حجم الشعار */
+    border-radius: 50%;
+    /* جعله دائريًا */
+    object-fit: cover;
+    /* التأكد من أن الصورة تملأ الدائرة */
+    border: 2px solid white;
+    /* إطار أبيض حول الشعار */
+    margin-left: 15px;
+    /* تباعد بين الشعار والنص */
+}
+
+h1 {
+    font-size: 1.5em;
+    /* حجم النص */
+}
+
+
+/* زر القائمة الجانبية */
+
+#menu-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* القائمة الجانبية */
+
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.menu-header {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-links {
+    padding: 15px;
+}
+
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.menu-section h4 {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-section a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-section a:hover {
+    background-color: #f0f0f0;
+    color: #004080;
+    padding-right: 15px;
+}
+
+
+/* باقي التنسيقات */
+
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    color: #004080;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.welcome p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #666;
+}
+
+.activities {
+    padding: 50px 20px;
+    background-color: #f0f7ff;
+    margin-bottom: 30px;
+}
+
+.activities h2 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.activity-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 20px;
+}
+
+.activity-content h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.activity-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.date {
+    display: block;
+    color: #777;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.about {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-text h3 {
+    color: #004080;
+    margin: 20px 0 10px 0;
+}
+
+.about-stats {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat {
+    flex: 1;
+    min-width: 120px;
+    background-color: #004080;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+}
+
+.gallery-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 200px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo h3 {
+    font-size: 1.3em;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
